@@ -1,10 +1,16 @@
-import './App.css'
-import {BrowserRouter, Routes, Route, Link, useParams} from 'react-router-dom'//npm i react-router-dom
-import User from './User';
+import "./App.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom"; //npm i react-router-dom
+import User from "./User";
 
 //React Router Dom -> location.href
-function App(){
-  
+function App() {
+  const jjs: number = 12;
   return (
     <div>
       <BrowserRouter>
@@ -24,31 +30,27 @@ function App(){
         </nav>
 
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/user' element={<User/>}></Route>
-          <Route path='/topics' element={<Topics/>}></Route>
-          <Route path='/topics/:topicId' element={<Topic/>}></Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/user" element={<User />}></Route>
+          <Route path="/topics" element={<Topics />}></Route>
+          <Route path="/topics/:topicId" element={<Topic />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-function Home(){
-  return(
-    <h1>Home</h1>
-  )
+function Home() {
+  return <h1>Home</h1>;
 }
 
-function About(){
-  return(
-    <h1>About</h1>
-  )
+function About() {
+  return <h1>About</h1>;
 }
 
-function Topics(){
-  return(
+function Topics() {
+  return (
     <div>
       <h2>Topics</h2>
       <ul>
@@ -60,16 +62,14 @@ function Topics(){
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-function Topic(){
-let { topicId } = useParams();
+function Topic() {
+  let { topicId } = useParams();
   console.log(topicId);
-  
-  return(
-    <h1>Topic : {topicId}</h1>
-  )
+
+  return <h1>Topic : {topicId}</h1>;
 }
 
-export default App
+export default App;
