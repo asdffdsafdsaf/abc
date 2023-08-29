@@ -9,8 +9,9 @@ import {
 import User from "./User";
 
 //React Router Dom -> location.href
-function App() {
-  const jjs: number = 12;
+function App(){
+    const jjs: number = 12;
+  const yeni:string = 'yeni';
   return (
     <div>
       <BrowserRouter>
@@ -23,9 +24,6 @@ function App() {
           </ul>
           <ul>
             <Link to="/user">user</Link>
-          </ul>
-          <ul>
-            <Link to="/topics">topics</Link>
           </ul>
         </nav>
     </div>
