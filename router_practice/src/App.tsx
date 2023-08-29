@@ -28,7 +28,6 @@ function App() {
             <Link to="/topics">topics</Link>
           </ul>
         </nav>
-
     </div>
   );
 }
